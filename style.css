@@ -1,5 +1,6 @@
 /*google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 :root{
     --header-height: 3rem;
@@ -151,6 +152,7 @@ img{
 }
 
 .nav_logo{
+    font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--title-color);
@@ -1068,15 +1070,16 @@ img{
     }
 
     .button{
-    background: var(--first-color);
-    border-radius: 2rem;
-    margin-left: 4rem;
+        background: var(--first-color);
+        color: #FFF;
+        border-radius: 2rem;
+        margin-left: 4rem;
     }
 
     .button_icon{
         color: #FFF;
     }
-
+    
     .home_social-icon:nth-child(1),
     .footer_social:nth-child(1){
         color: #4267B2;
@@ -1095,8 +1098,20 @@ img{
     .services_button{
         border: none;
         background: none;
+        color: var(--first-color);
+    }
+
+    .services_button .button_icon{
+        color: var(--first-color);
     }
     
+    .nav_list{
+        column-gap: 0;
+    }
+
+    .nav_link{
+        padding: .2rem 0;
+    }
 
     .home_data{
         grid-column: initial;
@@ -1112,14 +1127,32 @@ img{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer_container{
-        padding-top: 2rem;
-    }
-
     .qualification_sections {
         display: grid;
         grid-template-columns: .6fr;
         justify-content: center;
+    }
+
+    .services_tile{
+        padding-left: 1rem;
+    }
+
+    .services_modal{
+        padding: 0 .5rem;
+    }
+
+    .footer_container{
+        row-gap: 2rem;
+    }    
+
+    .footer_bg{
+        padding: 1rem 0;
+    }
+
+    .footer_links{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
     }
 }
 
