@@ -253,7 +253,12 @@ img{
 }
 
 .title_color{
-    color: #c23f25;
+    color: var(--first-color);
+}
+
+.text_animation{
+    color: rgb(185, 57, 57);
+    font-weight: bold;
 }
 
 .home_container{
@@ -1114,6 +1119,10 @@ img{
         width: 200px;
         height: 200px;
         border-radius: 10px;
+    }
+
+    .text_animation{
+        margin-left: .3rem;
     }
 
     .active_link{

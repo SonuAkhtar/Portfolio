@@ -166,3 +166,11 @@ function scrollUp(){
     }
 }
 window.addEventListener('scroll', scrollUp);
+
+//text animation
+var typed = new Typed('.text_animation',{
+    strings: ['Frontend Developer','UI/UX Designer', 'Logo Designer'],
+    typeSpeed: 40,
+    backSpeed: 35,
+    loop: true
+});
