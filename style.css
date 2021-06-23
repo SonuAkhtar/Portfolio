@@ -230,6 +230,11 @@ img{
     bottom: 0;
 }
 
+.active_tab{
+    background: var(--first-color);
+    color: #FFF !important;
+}
+
 .active_link{
     background: var(--first-color);
     color: #FFF !important;
@@ -1109,6 +1114,18 @@ img{
         width: 200px;
         height: 200px;
         border-radius: 10px;
+    }
+
+    .active_link{
+        background: none;
+        color: var(--first-color) !important;
+        box-shadow: none !important;
+    }
+
+    .active_tab{
+        background: none;
+        color: var(--first-color) !important;
+        box-shadow: none !important;
     }
 
     .about_subtitle{

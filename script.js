@@ -120,7 +120,26 @@ navLinks.forEach(link =>{
     })
 });
 
+//active page scroll
+const sections = document.querySelectorAll('section[id]'); 
 
+function activeTab(){
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(active =>{
+        const sectionHeight = active.offsetHeight;
+        const sectionTop = active.offsetTop - 50;
+        sectionID = active.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav_menu a[href*=' + sectionID +']').classList.add('active_tab');
+        }
+        else{
+            document.querySelector('.nav_menu a[href*=' + sectionID +']').classList.remove('active_tab');
+        }
+    });
+}
+window.addEventListener('scroll', activeTab);
 
 //menu background
 function scrollHeader(){
