@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
 :root{
     --header-height: 3rem;
 
@@ -63,6 +67,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 html{
@@ -372,14 +377,14 @@ img{
     padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
-    transition: .2s;
+    transition: 1s;
     transform: translateX(100px);
     opacity: 0;
 }
 
 .button[data-scroll="in"]{
     transform: translateX(0);
-    transition: .6s;
+    transition: 1s;
     opacity: 1;
 }
 
@@ -438,6 +443,15 @@ img{
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.about_info[data-scroll="in"]{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: .5s;
 }
 
 .about_info-title{
@@ -482,6 +496,15 @@ img{
 
 .skills_container{
     row-gap: 0;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: .8s;
+}
+
+.skills_container[data-scroll="in"]{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1s;
 }
 
 .skills_header{
@@ -609,6 +632,18 @@ img{
     padding-bottom: 2rem;
 }
 
+.qualification_container{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .8s;
+}
+
+.qualification_container[data-scroll="in"]{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1s;
+}
+
 .qualification_tabs{
     display: flex;
     justify-content: space-evenly;
@@ -733,6 +768,7 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
+    height: 100%;
     background: rgba(0,0,0,.5);
     display: flex;
     justify-content: center;
@@ -788,7 +824,7 @@ img{
 
 /*---- Certification ----*/
 
-.certificate_container{
+/* .certificate_container{
     overflow: initial;
 }
 
@@ -809,7 +845,7 @@ img{
 
 .certificate_description{
     margin-bottom: var(--mb-0-75);
-}
+} */
 
 /*---- Portfolio ----*/
 .portfolio{
