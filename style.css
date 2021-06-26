@@ -377,14 +377,14 @@ img{
     padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
-    transition: 1s;
+    transition: .3s;
     transform: translateX(100px);
     opacity: 0;
 }
 
 .button[data-scroll="in"]{
     transform: translateX(0);
-    transition: 1s;
+    transition: .8s;
     opacity: 1;
 }
 
