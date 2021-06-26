@@ -174,3 +174,30 @@ var typed = new Typed('.text_animation',{
     backSpeed: 35,
     loop: true
 });
+
+
+//contact validation
+function validate(){
+    debugger;
+    var name = document.getElementById('contact_name').value;
+    var email = document.getElementById('contact_email').value;
+    var message = document.getElementById('contact_msg').value;
+    var error_msg = document.getElementById('error_msg');
+    
+    error_msg.style.padding = '.2rem 0';
+
+    if(name.length < 2){
+        error_msg.innerHTML="Please enter a valid name";
+        name.focus();
+        return false;
+    }else if(email.length < 6){
+        error_msg.innerHTML="Please enter a valid email ID";
+        email.focus();
+        return false;
+    }else if(message.length < 2){
+        error_msg.innerHTML="Please write a nice message";
+        message.focus();
+        return false;
+    }
+    alert('You message submitted successfully');
+}

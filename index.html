@@ -619,25 +619,27 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" class="contact_form grid">
+                    <form action="" method="" id="contact_form" class="contact_form grid" autocomplete="off">
+                        <div id="error_msg"></div>
+                
                         <div class="contact_inputs grid">
                             <div class="contact_content">
                                 <i class="fas fa-user-edit contact_form-icon"></i>
-                                <input type="text" class="contact_input" placeholder="Enter your name" required>
+                                <input type="text" id="contact_name" class="contact_input" placeholder="Enter your name" required>
                             </div>
                             <div class="contact_content">
                                 <i class="fas fa-at contact_form-icon"></i>
-                                <input type="email" class="contact_input" placeholder="Enter your email" required>
+                                <input type="email" id="contact_email" class="contact_input" placeholder="Enter your email" required>
                             </div>
                         </div>
                         <div class="contact_content">
                             <i class="fas fa-envelope contact_form-icon"></i>
-                            <textarea name="" id="" cols="0" rows="4" class="contact_input" placeholder="Write your message" required></textarea>
+                            <textarea name="" id="contact_msg" cols="0" rows="4" class="contact_input" placeholder="Write your message" required></textarea>
                         </div>
                         <div>
-                            <a href="#" class="button button-flex contact_button">
+                            <button class="button button-flex contact_button" onclick="return validate()">
                                 Send Message<i class="fas fa-paper-plane button_icon"></i>  
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
